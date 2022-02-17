@@ -1,0 +1,16 @@
+{
+  "name": "testing_platform",
+  "version": "1.0.0",
+  "description": "Последовательность проектирования продукта",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.3",
+    "mysql2": "^2.3.3"
+  }
+}
