@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <nav class="menu">
+        <a href="/">Главная</a>
+        <a href="/api">API</a>
+        <a href="/test">Test</a>
+        <a href="/auth">Войти</a>
+    </nav>
+    <h1>{{name}} are you here?</h1>
+    <form action="">
+        {{#each data}}
+            <input type="text" name={{this}} placeholder={{this}}>
+        {{/each}}
+        <button class="btn" type="submit">Войти</button>
+    </form>
+</body>
+</html>
