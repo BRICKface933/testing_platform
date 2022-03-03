@@ -9,5 +9,11 @@ router.get("/auth", function(request, response){
         data:["name", "password"]
     });
 });
+router.get("/register", function(request, response){
+    response.render(
+        "register", {
+            data:["name", "password"]
+        });
+});
 
 module.exports = router;
