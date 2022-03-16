@@ -21,5 +21,40 @@
         {{/each}}
         <button class="btn" type="submit">Войти</button>
     </form>
+
+
+    <h2>Зарегестрироваться</h2>
+    <form id = "addUser">
+        <input type = 'text' name = "name" placeholder="">
+        <br>
+        <input type = 'email' name = "email" placeholder="email">
+        <br>
+        <input type = 'password' name = "pwd" placeholder="Пароль">
+        <br>
+        <button class="btn" type="submit">Добавить</button>
+    </form>
+
+    <script>
+        const form = document.forms.addUser;
+
+        form.onsubmit = function (e) {
+            e.preventDefault();
+            let body = {};
+            body.name = form.elements.name.value;
+            body.pwd = form.elements.pwd.value;
+            body.email = form.elements.email.value;
+            console.log(body);
+
+            fetch("/api/user/add", {
+                method: "post",
+                headers: {
+                    "Content-Type": 'application/json'
+                },
+                body: JSON.stringify(body)
+            })
+                .then(resp => resp.text())
+                .then(ans => console.log(ans));
+        }
+    </script>
 </body>
 </html>

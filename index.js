@@ -6,6 +6,8 @@ const application = express();
 application.set("view engine", "hbs");
 application.set("views", "./server/views");
 
+application.use(express.json());
+application.use(express.urlencoded({extended: true}));
 
 application.use(express.static("./public"));
 application.use("/api", require("./api/api.js"));
