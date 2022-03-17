@@ -13,6 +13,7 @@
   "dependencies": {
     "express": "^4.17.3",
     "hbs": "^4.2.0",
-    "mysql2": "^2.3.3"
+    "mysql2": "^2.3.3",
+    "nodaemon": "0.0.5"
   }
 }
